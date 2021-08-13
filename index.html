@@ -17,17 +17,21 @@
   <link rel="stylesheet" href="assets/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="assets/dist/MarkerCluster.Default.css" />
   <script src="assets/dist/leaflet.markercluster-src.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
 	
 </head>
 <body>
 
-<!-- <select name="estado" id="estado">
-  <option value="">Selecione</option>
-  <option value="Ceará">Ceará</option>
-  <option value="Goiás">Goiás</option>
-</select> -->
+<div id="mapid"></div>
+<script>
+  // jquery
+  let height_ = $(window).height()
+  let width_ = $(window).width()
+  $("#mapid").css({width:width_, height: height_})
 
-<div id="mapid" style="width: 800px; height: 600px;"></div>
+</script>
 
 
 <script src="assets/js/main_clustermarkers.js"></script>
