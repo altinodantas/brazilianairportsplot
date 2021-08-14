@@ -1,5 +1,4 @@
-Atualizado em: 2021-08-12
-C�digo OACI;CIAD;Nome;Munic�pio;UF;LATGEOPOINT;LONGEOPOINT;Latitude;Longitude;Altitude;Opera��o Diurna;Opera��o Noturna;Designa��o 1;Comprimento 1;Largura 1;Resist�ncia 1;Superf�cie 1;Designa��o 2;Comprimento 2;Largura 2;Resist�ncia 2;Superf�cie 2;Validade do Registro;Portaria de Registro;Link Portaria
+OACI;CIAD;Nome;Munic�pio;UF;LATGEOPOINT;LONGEOPOINT;Latitude;Longitude;Altitude;Opera��o Diurna;Opera��o Noturna;Designa��o 1;Comprimento 1;Largura 1;Resist�ncia 1;Superf�cie 1;Designa��o 2;Comprimento 2;Largura 2;Resist�ncia 2;Superf�cie 2;Validade do Registro;Portaria de Registro;Link Portaria
 SWZX;BA0322;Selma Nunes;MACA�BAS;Bahia;-13,094167;-42,5525;13�05'39.0"S;042�33'09.0"W;579,0;VFR;VFR;06/24;1400,0000;22,00;20/F/A/X/T;Asfalto;;;;;;01/10/2030;PA2020-2432;https://pergamum.anac.gov.br/arquivos/PA2020-2432.pdf
 SDXM;MG0474;Monte Cristo;MONTE BELO;Minas Gerais;-21,363056;-46,400833;21�21'47.0"S;046�24'03.0"W;911,0;VFR;VFR;06/24;799,0000;23,00;5700 Kg /   0.50 MPa;Grama;;;;;;01/10/2030;PA2020-2381;https://pergamum.anac.gov.br/arquivos/PA2020-2381.pdf
 SSLB;MS0300;Fazenda S�o Paulino;CORUMB�;Mato Grosso do Sul;-19,025556;-55,925;19�01'32.0"S;055�55'30.0"W;120,0;VFR;VFR;07/25;560,0000;20,00;5000 Kg /   0.50 MPa;Grama;;;;;;25/02/2031;PA2021-4237;https://pergamum.anac.gov.br/arquivos/PA2021-4237.pdf

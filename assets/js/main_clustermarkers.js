@@ -1,4 +1,11 @@
+/* TO-DO
+  1 - consider https://ghybs.github.io/Leaflet.FeatureGroup.SubGroup/examples/subGroup-markercluster-controlLayers-realworld.388.html
+  to create layer controls
 
+  2 - create a cluster marker for each state 
+
+  3 - Filtros de busca por código, cidade, estado
+*/
 
 // Mapa
 const mapCenter = [-18.519074, -49.526367]
@@ -28,10 +35,9 @@ const LeafIcon = L.Icon.extend({
   }
 })
 
-const greenIcon = new LeafIcon({ iconUrl: 'assets/img/green.svg' })
-const redIcon = new LeafIcon({ iconUrl: 'assets/img/red.svg' })
-const yellowIcon = new LeafIcon({ iconUrl: 'assets/img/yellow.svg' })
-const blueIcon = new LeafIcon({ iconUrl: 'assets/img/azul.svg' })
+const publicoIcon = new LeafIcon({ iconUrl: 'assets/img/publico.svg' })
+const helipontoIcon = new LeafIcon({ iconUrl: 'assets/img/heliponto.svg' })
+const privadoIcon = new LeafIcon({ iconUrl: 'assets/img/privado.svg' })
 
 var markers = L.markerClusterGroup();
     
@@ -41,7 +47,7 @@ fetch("files/aerodromos_publicos.json")
 
   data.forEach(element => {
     
-    const marker = L.marker([element.latitude,element.longitude], {icon: greenIcon})
+    const marker = L.marker([element.latitude,element.longitude], {icon: publicoIcon})
     marker.bindPopup(`<strong>${element.OACI} - ${element.Nome} </strong> <br/> \
                       Aeródromo público<br/> ${element.Município}, ${element.UF} <br /> \
                       latitude ${element.latitude}, longitude ${element.longitude} <br /> \
@@ -67,7 +73,7 @@ fetch("files/aerodromos_privados.json")
 
     data.forEach(element => {
       
-      const marker = L.marker([element.LATGEOPOINT,element.LONGEOPOINT], {icon: yellowIcon})
+      const marker = L.marker([element.LATGEOPOINT,element.LONGEOPOINT], {icon: privadoIcon})
       marker.bindPopup(` <strong>${element.OACI} - ${element.Nome} </strong> <br/>Aeródromo privado <br/> ${element.Município}, ${element.UF} <br />latitude ${element.LATGEOPOINT}, longitude ${element.LONGEOPOINT}`)
 
       markers.addLayer(marker);
@@ -86,7 +92,7 @@ fetch("files/aerodromos_privados.json")
 
     data.forEach(element => {
       
-      const marker = L.marker([element.latitude,element.longitude], {icon: blueIcon})
+      const marker = L.marker([element.latitude,element.longitude], {icon: helipontoIcon})
       marker.bindPopup(` <strong>${element.OACI} - ${element.Nome} </strong> <br/> \
                         Heliponto <br/> ${element.Município}, ${element.UF} <br /> \
                         latitude ${element.latitude}, longitude ${element.longitude} <br /> \
