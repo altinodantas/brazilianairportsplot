@@ -1,0 +1,13 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+#find-point {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+}
