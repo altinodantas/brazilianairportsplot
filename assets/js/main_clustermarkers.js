@@ -42,7 +42,14 @@ fetch("files/aerodromos_publicos.json")
   data.forEach(element => {
     
     const marker = L.marker([element.latitude,element.longitude], {icon: greenIcon})
-    marker.bindPopup(` <strong>${element.OACI} - ${element.NOME} </strong> <br/>Aeródromo público<br/> ${element.MUNICÍPIO}, ${element.UF} <br />lt:${element.latitude}, lg:${element.longitude}`)
+    marker.bindPopup(`<strong>${element.OACI} - ${element.Nome} </strong> <br/> \
+                      Aeródromo público<br/> ${element.Município}, ${element.UF} <br /> \
+                      latitude ${element.latitude}, longitude ${element.longitude} <br /> \
+                      Elevação ${element.ALTITUDE} <br /> \
+                      Comprimento ${element.COMPRIMENTO} <br /> \
+                      Largura ${element.LARGURA} <br /> \
+                      Designação ${element.DESIGNAÇÃO}
+                      `)
 
     markers.addLayer(marker);
 
@@ -61,7 +68,7 @@ fetch("files/aerodromos_privados.json")
     data.forEach(element => {
       
       const marker = L.marker([element.LATGEOPOINT,element.LONGEOPOINT], {icon: yellowIcon})
-      marker.bindPopup(` <strong>${element.OACI} - ${element.Nome} </strong> <br/>Aeródromo privado <br/> ${element.Município}, ${element.UF} <br />lt:${element.LATGEOPOINT}, lg:${element.LONGEOPOINT}`)
+      marker.bindPopup(` <strong>${element.OACI} - ${element.Nome} </strong> <br/>Aeródromo privado <br/> ${element.Município}, ${element.UF} <br />latitude ${element.LATGEOPOINT}, longitude ${element.LONGEOPOINT}`)
 
       markers.addLayer(marker);
 
@@ -79,8 +86,14 @@ fetch("files/aerodromos_privados.json")
 
     data.forEach(element => {
       
-      const marker = L.marker([element.LATGEOPOINT,element.LONGEOPOINT], {icon: blueIcon})
-      marker.bindPopup(` <strong>${element.OACI} - ${element.Nome} </strong> <br/>Heliponto <br/> ${element.Município}, ${element.UF} <br />lt:${element.LATGEOPOINT}, lg:${element.LONGEOPOINT}`)
+      const marker = L.marker([element.latitude,element.longitude], {icon: blueIcon})
+      marker.bindPopup(` <strong>${element.OACI} - ${element.Nome} </strong> <br/> \
+                        Heliponto <br/> ${element.Município}, ${element.UF} <br /> \
+                        latitude ${element.latitude}, longitude ${element.longitude} <br /> \
+                        Tipo: ${element.Tipo} <br /> \
+                        Formato: ${element.formato} <br/> \
+                        Dimensões: ${element.Dimensões}
+                        `)
 
       markers.addLayer(marker);
 
