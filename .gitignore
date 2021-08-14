@@ -42,4 +42,6 @@ git rm -r /.ipynb_checkpoints/
 /python-pre
 /.ipynb_checkpoints
 
-/.gitignore
+.gitignore
+
+.DS_Store
