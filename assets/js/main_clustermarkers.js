@@ -19,7 +19,7 @@ const map = L.map('mapid', {
 // Icons
 const LeafIcon = L.Icon.extend({
   options: {
-    // shadowUrl: 'assets/img/shadow.png',
+    shadowUrl: 'assets/img/shadow.png',
     iconSize: [22, 35], // size of the icon
     shadowSize: [46, 12], // size of the shadow
     iconAnchor: [11, 34], // point of the icon which will correspond to marker's location
