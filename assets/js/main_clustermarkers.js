@@ -20,7 +20,6 @@ const map = L.map('mapid', {
     zoom: zoom,
     layers: [mainLayer],
     zoomOffset: -1,
-    preferCanvas: true
 })
 
 // Icons
